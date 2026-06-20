@@ -8,7 +8,7 @@
     },
     "hero": {
         "greeting": "Salom, men",
-        "name": "Jumaqulov Yashnarbek",
+        "name": "Jumaqulov Yashnar",
         "roles": [
             "Kichik Daraja Frontend Dasturchi",
             "React Ishqibozi",
@@ -21,13 +21,13 @@
     },
     "about": {
         "title": "Men Haqimda",
-        "subtitle": "Vaqt Orqali Sayohatim",
-        "bio": "Men Jumaqulov Yashnarbek, O'zbekistonda istiqomat qiluvchi kichik frontend dasturchi. Soat har bir chertishi o'rganishga, qurish va o'sishga sarflangan soatlarni anglatadi. Sayohatimni HTML va CSS bilan boshladim, JavaScriptga oshiq bo'ldim, endi esa React mening uyim. Ajoyib UI faqat ko'rinish haqida emas — u qanday his qildirishini anglatishini bilaman.",
+        "subtitle": "Men Kim & Nima Qilaman",
+        "bio": "Men Jumaqulov Yashnar, O'zbekistonda istiqomat qiluvchi kichik frontend dasturchi. Sayohatimni HTML va CSS bilan boshladim, keyin JavaScript o'rgandim. Hozir React bilan ishlayman va har kuni yanada yaxshiroq bo'lmoqdaman. Yaxshi UI faqat ko'rinish emas — foydalanuvchiga qulaylik hisini ham beradi.",
         "clock_label": "O'rganishga sarflangan vaqt"
     },
     "skills": {
         "title": "Ko'nikmalar",
-        "subtitle": "Dunyomni aylanib yuruvchi texnologiyalar"
+        "subtitle": "Men ishlaydigan texnologiyalar"
     },
     "projects": {
         "title": "Loyihalar",

@@ -1,22 +1,43 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import ShinyText from './ui/ShinyText';
+
+// EmailJS configuration
+// 1. Go to https://www.emailjs.com/ and create a free account
+// 2. Add an email service (Gmail) and get SERVICE_ID
+// 3. Create an email template and get TEMPLATE_ID
+// 4. Get your PUBLIC_KEY from Account > API Keys
+const EMAILJS_SERVICE_ID = 'service_portfolio';
+const EMAILJS_TEMPLATE_ID = 'template_contact';
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
 
 export default function Contact() {
     const { t } = useTranslation();
+    const formRef = useRef();
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [status, setStatus] = useState('idle'); // idle, sending, success
+    const [status, setStatus] = useState('idle'); // idle, sending, success, error
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setStatus('sending');
-        // Simulate send
-        setTimeout(() => {
-            setStatus('success');
-            setFormData({ name: '', email: '', message: '' });
-            setTimeout(() => setStatus('idle'), 3000);
-        }, 1500);
+
+        emailjs.sendForm(
+            EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID,
+            formRef.current,
+            EMAILJS_PUBLIC_KEY
+        )
+            .then(() => {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+                setTimeout(() => setStatus('idle'), 3000);
+            })
+            .catch(() => {
+                setStatus('error');
+                setTimeout(() => setStatus('idle'), 3000);
+            });
     };
 
     return (
@@ -36,6 +57,7 @@ export default function Contact() {
 
                 {/* Form */}
                 <motion.form
+                    ref={formRef}
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -46,6 +68,7 @@ export default function Contact() {
                     {/* Name */}
                     <FloatingInput
                         type="text"
+                        name="from_name"
                         value={formData.name}
                         onChange={(val) => setFormData({ ...formData, name: val })}
                         label={t('contact.name_placeholder')}
@@ -54,6 +77,7 @@ export default function Contact() {
                     {/* Email */}
                     <FloatingInput
                         type="email"
+                        name="from_email"
                         value={formData.email}
                         onChange={(val) => setFormData({ ...formData, email: val })}
                         label={t('contact.email_placeholder')}
@@ -61,10 +85,14 @@ export default function Contact() {
 
                     {/* Message */}
                     <FloatingTextarea
+                        name="message"
                         value={formData.message}
                         onChange={(val) => setFormData({ ...formData, message: val })}
                         label={t('contact.message_placeholder')}
                     />
+
+                    {/* Hidden field for recipient email */}
+                    <input type="hidden" name="to_email" value="jumaqulovyashnar@gmail.com" />
 
                     {/* Submit */}
                     <motion.button
@@ -92,6 +120,9 @@ export default function Contact() {
                                 {t('contact.success')}
                             </span>
                         )}
+                        {status === 'error' && (
+                            <span className="text-red-300">Error! Try again.</span>
+                        )}
                     </motion.button>
                 </motion.form>
             </div>
@@ -99,7 +130,7 @@ export default function Contact() {
     );
 }
 
-function FloatingInput({ type, value, onChange, label }) {
+function FloatingInput({ type, name, value, onChange, label }) {
     const [focused, setFocused] = useState(false);
     const active = focused || value.length > 0;
 
@@ -107,6 +138,7 @@ function FloatingInput({ type, value, onChange, label }) {
         <div className="relative">
             <input
                 type={type}
+                name={name}
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 onFocus={() => setFocused(true)}
@@ -124,13 +156,14 @@ function FloatingInput({ type, value, onChange, label }) {
     );
 }
 
-function FloatingTextarea({ value, onChange, label }) {
+function FloatingTextarea({ name, value, onChange, label }) {
     const [focused, setFocused] = useState(false);
     const active = focused || value.length > 0;
 
     return (
         <div className="relative">
             <textarea
+                name={name}
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 onFocus={() => setFocused(true)}

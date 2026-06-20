@@ -8,7 +8,7 @@
     },
     "hero": {
         "greeting": "Hello, I'm",
-        "name": "Jumaqulov Yashnarbek",
+        "name": "Jumaqulov Yashnar",
         "roles": [
             "Junior Frontend Developer",
             "React Enthusiast",
@@ -21,13 +21,13 @@
     },
     "about": {
         "title": "About Me",
-        "subtitle": "My Journey Through Time",
-        "bio": "I'm Jumaqulov Yashnarbek, a junior frontend developer based in Uzbekistan. Every tick of the clock represents hours spent learning, building, and growing. I started my journey with HTML and CSS, fell in love with JavaScript, and now React is my home. I believe great UI is not just about looks — it's about how it feels.",
+        "subtitle": "Who I Am & What I Do",
+        "bio": "I'm Jumaqulov Yashnar, a junior frontend developer based in Uzbekistan. I started my journey with HTML and CSS, then moved on to JavaScript. Now I work with React and I'm getting better at it every day. I believe great UI is not just about looks — it's about how it feels to use.",
         "clock_label": "Time invested in learning"
     },
     "skills": {
         "title": "Skills",
-        "subtitle": "Technologies orbiting my world"
+        "subtitle": "Technologies I work with"
     },
     "projects": {
         "title": "Projects",

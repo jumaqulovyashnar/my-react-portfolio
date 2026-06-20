@@ -20,7 +20,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1, duration: 0.6 }}
-                        className="text-text-secondary text-lg md:text-xl font-body mb-2"
+                        className="text-text-secondary text-lg md:text-xl font-body mb-4"
                     >
                         {t('hero.greeting')}
                     </motion.p>
@@ -42,7 +42,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.6 }}
-                        className="mt-4"
+                        className="mt-6"
                     >
                         <Typewriter roles={roles} />
                     </motion.div>
@@ -52,7 +52,8 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.6 }}
-                        className="mt-6 max-w-xl text-text-secondary text-base md:text-lg font-body leading-relaxed"
+                        className="mt-4 max-w-2xl text-text-secondary text-base md:text-lg font-body"
+                        style={{ lineHeight: '2.2' }}
                     >
                         {t('hero.description')}
                     </motion.p>

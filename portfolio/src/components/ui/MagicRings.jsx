@@ -1,18 +1,18 @@
 export default function MagicRings() {
-    return (
-        <div className="relative w-[320px] h-[320px] md:w-[460px] md:h-[460px]">
-            {[...Array(4)].map((_, i) => (
-                <div
-                    key={i}
-                    className="absolute inset-0 rounded-full border border-accent-primary/20"
-                    style={{
-                        animation: `magicRing ${3 + i * 1.5}s ease-in-out infinite`,
-                        animationDelay: `${i * 0.5}s`,
-                        transform: `scale(${0.6 + i * 0.15})`,
-                    }}
-                />
-            ))}
-            <style>{`
+  return (
+    <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px]">
+      {[...Array(4)].map((_, i) => (
+        <div
+          key={i}
+          className="absolute inset-0 rounded-full border border-accent-primary/20"
+          style={{
+            animation: `magicRing ${3 + i * 1.5}s ease-in-out infinite`,
+            animationDelay: `${i * 0.5}s`,
+            transform: `scale(${0.6 + i * 0.15})`,
+          }}
+        />
+      ))}
+      <style>{`
         @keyframes magicRing {
           0%, 100% {
             opacity: 0.1;
@@ -24,6 +24,6 @@ export default function MagicRings() {
           }
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 }

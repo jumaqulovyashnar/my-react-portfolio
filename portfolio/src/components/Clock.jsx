@@ -134,13 +134,13 @@ export default function Clock() {
   return (
     <div className="relative flex items-center justify-center">
       {/* Purple glow behind clock */}
-      <div className="absolute w-80 h-80 md:w-[400px] md:h-[400px] rounded-full bg-purple-600/15 blur-3xl" />
+      <div className="absolute w-64 h-64 md:w-80 md:h-80 rounded-full bg-purple-600/10 blur-3xl" />
       <canvas
         ref={canvasRef}
         width={360}
         height={360}
-        className="relative z-10 rounded-full w-[260px] h-[260px] md:w-[360px] md:h-[360px]"
-        style={{ filter: 'drop-shadow(0 0 25px rgba(124,58,237,0.5))' }}
+        className="relative z-10 rounded-full w-[240px] h-[240px] md:w-[320px] md:h-[320px]"
+        style={{ filter: 'drop-shadow(0 0 20px rgba(124,58,237,0.4))' }}
       />
     </div>
   );

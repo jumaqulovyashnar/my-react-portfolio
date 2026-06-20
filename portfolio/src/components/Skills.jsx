@@ -21,7 +21,7 @@ const allLogos = [
 export default function Skills() {
     const { t } = useTranslation();
     return (
-        <section id="skills" className="relative py-24 px-4 overflow-hidden">
+        <section id="skills" className="relative py-24 overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[600px] md:h-[600px] bg-accent-primary/10 rounded-full blur-[120px]" />
@@ -38,7 +38,7 @@ export default function Skills() {
                 </svg>
             </div>
 
-            <div className="relative z-10 max-w-6xl mx-auto">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

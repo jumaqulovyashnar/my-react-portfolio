@@ -21,8 +21,8 @@
     },
     "about": {
         "title": "About Me",
-        "subtitle": "Who I Am & What I Do",
-        "bio": "I'm Jumaqulov Yashnar, a junior frontend developer based in Uzbekistan. I started my journey with HTML and CSS, then moved on to JavaScript. Now I work with React and I'm getting better at it every day. I believe great UI is not just about looks — it's about how it feels to use.",
+        "subtitle": "A little bit about who I am and what drives me as a developer",
+        "bio": "I'm Jumaqulov Yashnar, a junior frontend developer based in Uzbekistan. I started my journey with HTML and CSS, then moved on to JavaScript. Now I work with React and I'm getting better at it every day. I believe great UI is not just about looks — it's about how it feels to use. My future goal is to work at Microsoft.",
         "clock_label": "Time invested in learning"
     },
     "skills": {

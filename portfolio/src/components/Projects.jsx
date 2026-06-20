@@ -36,8 +36,8 @@ export default function Projects() {
     const { t } = useTranslation();
 
     return (
-        <section id="projects" className="relative py-24 px-4">
-            <div className="max-w-6xl mx-auto">
+        <section id="projects" className="relative py-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

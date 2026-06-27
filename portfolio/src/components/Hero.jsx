@@ -13,7 +13,7 @@ export default function Hero() {
             {/* Star Burst Background */}
             <StarBurst />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 mt-5">
                 <div className="flex flex-col items-center text-center">
                     {/* Greeting */}
                     <motion.p

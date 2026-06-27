@@ -7,7 +7,7 @@ export default function About() {
   const { t } = useTranslation();
 
   return (
-    <section id="about" className="relative py-32 overflow-hidden min-h-[80vh] flex items-center">
+    <section id="about" className="relative py-20 overflow-hidden min-h-[80vh] flex items-center">
       {/* Background Decor */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
         <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-accent-primary/10 rounded-full blur-[100px]" />
@@ -27,10 +27,10 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-20 -mt-5"
         >
           <ShinyText text={t('about.title')} className="text-3xl md:text-4xl font-display font-bold" />
-          <p className="mt-4 text-text-secondary font-body text-base md:text-lg">{t('about.subtitle')}</p>
+          <p className="mt-5 text-text-primary font-body text-base md:text-lg leading-relaxed">{t('about.subtitle')}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import LanguageToggle from './ui/LanguageToggle';
 
 export default function Navbar() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
@@ -38,12 +39,6 @@ export default function Navbar() {
         return () => observer.disconnect();
     }, []);
 
-    const toggleLang = () => {
-        const newLang = i18n.language === 'en' ? 'uz' : 'en';
-        i18n.changeLanguage(newLang);
-        localStorage.setItem('lang', newLang);
-    };
-
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${scrolled ? 'bg-background/80 backdrop-blur-xl border-border' : 'bg-background/50 backdrop-blur-sm border-border/50'
@@ -75,12 +70,7 @@ export default function Navbar() {
                                 )}
                             </a>
                         ))}
-                        <button
-                            onClick={toggleLang}
-                            className="px-3 py-1.5 rounded-full text-xs font-medium border border-border hover:border-accent-primary hover:text-accent-light transition-all"
-                        >
-                            {i18n.language === 'en' ? '🇬🇧 EN' : '🇺🇿 UZ'}
-                        </button>
+                        <LanguageToggle />
                     </div>
 
                     {/* Mobile hamburger */}
@@ -127,12 +117,7 @@ export default function Navbar() {
                                     {t(`nav.${link.key}`)}
                                 </a>
                             ))}
-                            <button
-                                onClick={toggleLang}
-                                className="px-3 py-1.5 rounded-full text-xs font-medium border border-border hover:border-accent-primary transition-all"
-                            >
-                                {i18n.language === 'en' ? '🇬🇧 EN' : '🇺🇿 UZ'}
-                            </button>
+                            <LanguageToggle />
                         </div>
                     </motion.div>
                 )}

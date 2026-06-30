@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import ShinyText from './ui/ShinyText';
 
-const EMAILJS_SERVICE_ID = 'service_a7yareb';
-const EMAILJS_TEMPLATE_ID = 'template_a2h1jqq';
-const EMAILJS_PUBLIC_KEY = '59c9fQVAr9POM_Ukj';
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
     const { t } = useTranslation();
@@ -31,7 +31,7 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="relative py-24">
+        <section id="contact" className="relative py-12 md:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <motion.div
@@ -39,7 +39,7 @@ export default function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-14"
+                    className="text-center mb-8 md:mb-14"
                 >
                     <ShinyText text={t('contact.title')} className="text-3xl md:text-4xl font-display font-bold" />
                     <p className="mt-3 text-text-secondary font-body">{t('contact.subtitle')}</p>
@@ -145,7 +145,7 @@ export default function Contact() {
                         transition={{ duration: 0.7, delay: 0.4 }}
                         className="hidden md:flex items-center justify-center"
                     >
-                        <img src="/sent.svg" alt="Contact illustration" className="w-full max-w-md drop-shadow-2xl" />
+                        <img src="/sent.svg" alt="Contact illustration" width="448" height="448" className="w-full max-w-md drop-shadow-2xl h-auto" />
                     </motion.div>
                 </div>
             </div>

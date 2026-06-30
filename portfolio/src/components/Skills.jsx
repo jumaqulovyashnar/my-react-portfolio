@@ -21,7 +21,7 @@ const allLogos = [
 export default function Skills() {
     const { t } = useTranslation();
     return (
-        <section id="skills" className="relative py-24 overflow-hidden">
+        <section id="skills" className="relative py-12 md:py-[110px] overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[600px] md:h-[600px] bg-accent-primary/10 rounded-full blur-[120px]" />
@@ -38,6 +38,12 @@ export default function Skills() {
                 </svg>
             </div>
 
+            {/* Top gradient blur overlay */}
+            <div className="absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-background to-transparent pointer-events-none z-20" />
+
+            {/* Bottom gradient blur overlay */}
+            <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
+
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
@@ -45,10 +51,10 @@ export default function Skills() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-10 md:mb-16"
                 >
                     <ShinyText text={t('skills.title')} className="text-3xl md:text-5xl font-display font-bold" />
-                    <p className="mt-4 text-text-secondary font-mono text-base tracking-wide">{t('skills.subtitle')}</p>
+                    <p className="mt-6 text-text-secondary font-mono text-base tracking-wide leading-relaxed">{t('skills.subtitle')}</p>
                 </motion.div>
 
                 {/* Single row - scrolling right */}
@@ -62,8 +68,8 @@ export default function Skills() {
                         logos={allLogos}
                         speed={45}
                         direction="right"
-                        logoHeight={80}
-                        gap={70}
+                        logoHeight={100}
+                        gap={80}
                         hoverSpeed={0}
                         scaleOnHover
                         fadeOut

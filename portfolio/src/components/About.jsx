@@ -7,7 +7,7 @@ export default function About() {
   const { t } = useTranslation();
 
   return (
-    <section id="about" className="relative py-20 overflow-hidden min-h-[80vh] flex items-center">
+    <section id="about" className="relative py-10 md:py-20 overflow-hidden min-h-[auto] md:min-h-[80vh] flex items-center">
       {/* Background Decor */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
         <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-accent-primary/10 rounded-full blur-[100px]" />
@@ -27,22 +27,22 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20 -mt-5"
+          className="text-center mb-10 md:mb-20 -mt-5"
         >
           <ShinyText text={t('about.title')} className="text-3xl md:text-4xl font-display font-bold" />
-          <p className="mt-5 text-text-primary font-body text-base md:text-lg leading-relaxed">{t('about.subtitle')}</p>
+          <p className="mt-5 text-text-primary font-body text-base md:text-lg leading-relaxed px-2 md:px-0">{t('about.subtitle')}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center md:items-start">
           {/* Bio Text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="flex items-start pt-8"
+            className="flex items-center md:items-start pt-4 md:pt-8"
           >
-            <p className="text-text-secondary text-base md:text-lg leading-[2.5] md:leading-[2.8] font-body">
+            <p className="text-text-secondary text-base md:text-lg leading-[2.2] md:leading-[2.5] font-body text-justify md:text-left px-2 md:px-0">
               {t('about.bio')}
             </p>
           </motion.div>
@@ -56,7 +56,7 @@ export default function About() {
             <div className="relative z-10">
               <Clock />
             </div>
-            <p className="mt-[45px] text-text-muted text-base md:text-lg font-body text-center">{t('about.clock_label')}</p>
+            <p className="mt-6 md:mt-[45px] text-text-muted text-base md:text-lg font-body text-center">{t('about.clock_label')}</p>
           </motion.div>
         </div>
       </div>

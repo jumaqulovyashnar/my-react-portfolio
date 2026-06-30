@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <footer className="border-t border-border py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                <a href="#home" className="flex items-center gap-2 text-accent-primary font-display font-bold text-lg cursor-pointer">
+                <a href="#home" aria-label="Back to home" className="flex items-center gap-2 text-accent-primary font-display font-bold text-lg cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary rounded-lg p-1 -ml-1">
                     <span className="text-text-primary">&lt;/&gt;</span>
                     <span className="text-accent-light">JY</span>
                 </a>

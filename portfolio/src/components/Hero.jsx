@@ -9,11 +9,11 @@ export default function Hero() {
     const roles = t('hero.roles', { returnObjects: true });
 
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section id="home" className="relative min-h-[auto] md:min-h-screen flex items-start md:items-center justify-center overflow-hidden pt-[120px] md:pt-0">
             {/* Star Burst Background */}
             <StarBurst />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 mt-5">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 md:py-20 w-full">
                 <div className="flex flex-col items-center text-center">
                     {/* Greeting */}
                     <motion.p
@@ -32,6 +32,7 @@ export default function Hero() {
                         transition={{ delay: 0.2, duration: 0.6 }}
                     >
                         <ShinyText
+                            as="h1"
                             text={t('hero.name')}
                             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold"
                         />
@@ -42,7 +43,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.6 }}
-                        className="mt-6"
+                        className="mt-6 min-h-[32px] md:min-h-[40px] flex items-center justify-center"
                     >
                         <Typewriter roles={roles} />
                     </motion.div>

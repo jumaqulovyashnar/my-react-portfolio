@@ -40,14 +40,14 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav
+        <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${scrolled ? 'bg-background/80 backdrop-blur-xl border-border' : 'bg-background/50 backdrop-blur-sm border-border/50'
                 }`}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-50" aria-label="Main navigation">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <a href="#home" className="flex items-center gap-2 text-accent-primary font-display font-bold text-xl">
+                    <a href="#home" aria-label="Home page" className="flex items-center gap-2 text-accent-primary font-display font-bold text-xl rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary p-1 -ml-1">
                         <span className="text-text-primary">&lt;/&gt;</span>
                         <span className="text-accent-light">JY</span>
                     </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
                             <a
                                 key={link.key}
                                 href={link.href}
-                                className="relative text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+                                className="relative text-sm font-medium text-text-secondary hover:text-text-primary transition-colors px-2 py-1 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary"
                             >
                                 {t(`nav.${link.key}`)}
                                 {activeSection === link.key && (
@@ -75,9 +75,10 @@ export default function Navbar() {
 
                     {/* Mobile hamburger */}
                     <button
-                        className="md:hidden flex flex-col gap-1.5 p-2"
+                        className="md:hidden flex flex-col gap-1.5 p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary"
                         onClick={() => setMobileOpen(!mobileOpen)}
                         aria-label="Toggle menu"
+                        aria-expanded={mobileOpen}
                     >
                         <motion.span
                             animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
@@ -93,35 +94,49 @@ export default function Navbar() {
                         />
                     </button>
                 </div>
-            </div>
+            </nav>
 
             {/* Mobile Menu */}
             <AnimatePresence>
                 {mobileOpen && (
                     <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="md:hidden overflow-hidden bg-surface/95 backdrop-blur-xl border-b border-border"
+                        className="md:hidden fixed inset-0 h-[100svh] w-screen bg-black/95 backdrop-blur-2xl z-40 flex flex-col items-center justify-center gap-8"
                     >
-                        <div className="flex flex-col items-center gap-4 py-6">
-                            {links.map((link) => (
-                                <a
-                                    key={link.key}
-                                    href={link.href}
-                                    onClick={() => setMobileOpen(false)}
-                                    className={`text-sm font-medium transition-colors ${activeSection === link.key ? 'text-accent-light' : 'text-text-secondary'
-                                        }`}
-                                >
-                                    {t(`nav.${link.key}`)}
-                                </a>
-                            ))}
+                        {links.map((link, i) => (
+                            <motion.a
+                                key={link.key}
+                                href={link.href}
+                                onClick={() => setMobileOpen(false)}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 20 }}
+                                transition={{ delay: 0.05 * i, duration: 0.4, ease: "easeOut" }}
+                                className={`text-3xl font-display font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary rounded-lg px-4 py-2 ${
+                                    activeSection === link.key 
+                                    ? 'text-accent-light drop-shadow-[0_0_15px_rgba(192,132,252,0.5)] scale-110' 
+                                    : 'text-text-secondary hover:text-text-primary'
+                                }`}
+                            >
+                                {t(`nav.${link.key}`)}
+                            </motion.a>
+                        ))}
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 20 }}
+                            transition={{ delay: 0.05 * links.length, duration: 0.4 }}
+                            className="mt-8 scale-125"
+                        >
                             <LanguageToggle />
-                        </div>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>
+        </header>
     );
 }

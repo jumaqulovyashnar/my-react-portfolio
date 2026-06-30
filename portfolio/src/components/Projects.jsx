@@ -36,7 +36,7 @@ export default function Projects() {
     const { t } = useTranslation();
 
     return (
-        <section id="projects" className="relative py-24">
+        <section id="projects" className="relative py-12 md:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <motion.div
@@ -44,7 +44,7 @@ export default function Projects() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
                     <ShinyText text={t('projects.title')} className="text-3xl md:text-4xl font-display font-bold" />
                     <p className="mt-3 text-text-secondary font-body">{t('projects.subtitle')}</p>

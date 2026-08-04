@@ -35,9 +35,7 @@
         "live": "Jonli Demo",
         "github": "GitHub",
         "topDonateDesc": "Telegram orqali tez va xavfsiz ehson yuborish hamda xayriyalarni boshqarish uchun mo'ljallangan Telegram Bot.",
-        "devPortfolioDesc": "Animatsiyalar va ko'p tillilik (i18n) qo'llab-quvvatlanishiga ega shaxsiy portfolio veb-sayti.",
-        "taskFlowDesc": "Drag-and-drop va lokal saqlash (localStorage) imkoniyatiga ega topshiriqlar menejeri.",
-        "weatherDesc": "OpenWeatherMap API va qulay grafiklar bilan ishlaydigan ob-havo ilovasi."
+        "devPortfolioDesc": "Animatsiyalar va ko'p tillilik (i18n) qo'llab-quvvatlanishiga ega shaxsiy portfolio veb-sayti."
     },
     "contact": {
         "title": "Aloqa",

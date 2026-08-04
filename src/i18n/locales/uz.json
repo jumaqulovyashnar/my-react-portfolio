@@ -10,11 +10,11 @@
         "greeting": "Salom men",
         "name": "Jumaqulov Yashnar",
         "roles": [
-            "React kutubxonasi yordamida veb-saytlar ishlab chiqish bo‘yicha mutaxassis.",
+            "React kutubxonasi yordamida web-site'lar ishlab chiqish bo‘yicha mutaxassis.",
             "Frontend Dasturchi.",
-            "Zamonaviy Veb Ilovalar Yaratuvchisi."
+            "Zamonaviy Web-site'lar Yaratuvchisi."
         ],
-        "description": "Men zamonaviy veb tajribalarini toza kod va ijodiy dizayn bilan yarataman. G'oyalarni piksel mukammal haqiqatga aylantirishni sevaman.",
+        "description": "Men zamonaviy web tajribalarini toza kod va ijodiy dizayn bilan yarataman. G'oyalarni piksel mukammal haqiqatga aylantirishni sevaman.",
         "cta_projects": "Loyihalarni Ko'rish",
         "cta_cv": "CV Yuklab Olish"
     },
@@ -30,7 +30,7 @@
     },
     "projects": {
         "title": "Loyihalar",
-        "subtitle": "Men qurgan veb saytlar va loyihalar.",
+        "subtitle": "Men qurgan web-site'lar va loyihalar.",
         "live": "Demo",
         "github": "GitHub",
         "topDonateDesc": "Telegram orqali tez va xavfsiz ehson yuborish hamda xayriyalarni boshqarish uchun mo'ljallangan Telegram Bot.",

@@ -10,9 +10,9 @@
         "greeting": "Hello I'm",
         "name": "Jumaqulov Yashnar",
         "roles": [
-            "Website Development Specialist Using React Library",
-            "Frontend Developer",
-            "Modern Web Application Developer"
+            "Website Development Specialist Using React Library.",
+            "Frontend Developer.",
+            "Modern Web Application Developer."
         ],
         "description": "I craft modern web experiences with clean code and creative design. Passionate about turning ideas into pixel-perfect realities.",
         "cta_projects": "View Projects",
@@ -20,17 +20,17 @@
     },
     "about": {
         "title": "About Me",
-        "subtitle": "A little bit about who I am and what drives me as a developer",
+        "subtitle": "A little bit about who I am and what drives me as a developer.",
         "bio": "I'm Jumaqulov Yashnar, a junior frontend developer based in Uzbekistan. I started my journey with HTML and CSS, then moved on to JavaScript. Now I work with React and I'm getting better at it every day. I believe great UI is not just about looks — it's about how it feels to use. My future goal is to work at Microsoft.",
         "clock_label": "Time dedicated to learning Frontend & programming."
     },
     "skills": {
         "title": "Skills",
-        "subtitle": "Technologies I work with"
+        "subtitle": "Technologies I work with."
     },
     "projects": {
         "title": "Projects",
-        "subtitle": "Websites and projects I've built",
+        "subtitle": "Websites and projects I've built.",
         "live": "Demo",
         "github": "GitHub",
         "topDonateDesc": "A Telegram Bot built for fast and secure donations and managing charity contributions.",
@@ -39,7 +39,7 @@
     },
     "contact": {
         "title": "Contact",
-        "subtitle": "Let's work together",
+        "subtitle": "Let's work together.",
         "name_placeholder": "Your Name",
         "email_placeholder": "Your Email",
         "message_placeholder": "Your Message",
@@ -47,6 +47,6 @@
         "success": "Message sent successfully!"
     },
     "footer": {
-        "rights": "All rights reserved"
+        "rights": "All rights reserved."
     }
 }

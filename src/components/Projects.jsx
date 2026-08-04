@@ -50,7 +50,7 @@ export default function Projects() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-8 md:mb-16"
                 >
-                    <ShinyText text={t('projects.title')} className="text-3xl md:text-4xl font-display font-bold" />
+                    <ShinyText as="h2" text={t('projects.title')} className="text-3xl md:text-4xl font-display font-bold" />
                     <p className="mt-3 text-text-secondary font-body">{t('projects.subtitle')}</p>
                 </motion.div>
 

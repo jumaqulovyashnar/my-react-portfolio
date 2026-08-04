@@ -29,7 +29,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 md:mb-20 -mt-5"
         >
-          <ShinyText text={t('about.title')} className="text-3xl md:text-4xl font-display font-bold" />
+          <ShinyText as="h2" text={t('about.title')} className="text-3xl md:text-4xl font-display font-bold" />
           <p className="mt-5 text-text-primary font-body text-base md:text-lg leading-relaxed px-2 md:px-0">{t('about.subtitle')}</p>
         </motion.div>
 

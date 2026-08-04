@@ -53,7 +53,7 @@ export default function Skills() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-10 md:mb-16"
                 >
-                    <ShinyText text={t('skills.title')} className="text-3xl md:text-5xl font-display font-bold" />
+                    <ShinyText as="h2" text={t('skills.title')} className="text-3xl md:text-4xl font-display font-bold" />
                     <p className="mt-6 text-text-secondary font-mono text-base tracking-wide leading-relaxed">{t('skills.subtitle')}</p>
                 </motion.div>
 

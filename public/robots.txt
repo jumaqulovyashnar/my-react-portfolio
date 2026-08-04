@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://my-react-portfolio-ten-omega.vercel.app/sitemap.xml

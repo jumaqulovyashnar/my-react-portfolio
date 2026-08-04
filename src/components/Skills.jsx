@@ -66,11 +66,10 @@ export default function Skills() {
                 >
                     <LogoLoop
                         logos={allLogos}
-                        speed={45}
+                        speed={25}
                         direction="right"
-                        logoHeight={100}
-                        gap={80}
-                        hoverSpeed={0}
+                        logoHeight={50}
+                        gap={24}
                         scaleOnHover
                         fadeOut
                         fadeOutColor="#0a0a0f"

@@ -64,10 +64,10 @@ export const LogoLoop = memo(({
 
                         return (
                             <li className="logoloop__item" key={index} role="listitem">
-                                <div className="logoloop__card flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:border-accent-primary/40 hover:bg-white/[0.08] transition-all">
+                                <div className="logoloop__card flex flex-col items-center justify-center p-3 rounded-xl bg-white/[0.03] border border-white/10 hover:border-accent-primary/40 hover:bg-white/[0.08] transition-all">
                                     {renderItem ? renderItem(item, index) : content}
                                     {item.title && (
-                                        <span className="mt-2 text-xs sm:text-sm font-mono text-text-secondary">
+                                        <span className="mt-2 text-xs sm:text-sm font-mono text-text-secondary truncate max-w-full text-center px-1">
                                             {item.title}
                                         </span>
                                     )}

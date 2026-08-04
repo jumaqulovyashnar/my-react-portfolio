@@ -71,6 +71,19 @@
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.logoloop__card {
+    width: 120px;
+    height: 110px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+    .logoloop__card {
+        width: 135px;
+        height: 120px;
+    }
+}
+
 .logoloop--scale-hover .logoloop__item:hover .logoloop__card {
     transform: translateY(-4px) scale(1.05);
 }

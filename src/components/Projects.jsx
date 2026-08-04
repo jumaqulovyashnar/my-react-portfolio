@@ -11,7 +11,7 @@ const projects = [
         accent: '#0088cc',
         gradient: 'from-sky-500 to-blue-600',
         live: 'https://t.me/top_DonateUzbot',
-        github: '#',
+        github: 'https://github.com/jumaqulovyashnar/uc-and-almaz-bot',
     },
     {
         title: 'Shafmet Admin Panel',

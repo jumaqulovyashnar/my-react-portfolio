@@ -17,9 +17,9 @@ export default function Hero() {
                 <div className="flex flex-col items-center text-center">
                     {/* Greeting */}
                     <motion.p
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1, duration: 0.6 }}
+                        transition={{ duration: 0.3 }}
                         className="text-text-secondary text-lg md:text-xl font-body mb-4"
                     >
                         {t('hero.greeting')}
@@ -27,9 +27,9 @@ export default function Hero() {
 
                     {/* Name with Shiny Text */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.6 }}
+                        transition={{ duration: 0.3 }}
                     >
                         <ShinyText
                             as="h1"
@@ -40,9 +40,9 @@ export default function Hero() {
 
                     {/* Typewriter Role */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3, duration: 0.6 }}
+                        transition={{ duration: 0.3 }}
                         className="mt-6 min-h-[32px] md:min-h-[40px] flex items-center justify-center"
                     >
                         <Typewriter roles={roles} />
@@ -50,9 +50,9 @@ export default function Hero() {
 
                     {/* Description */}
                     <motion.p
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4, duration: 0.6 }}
+                        transition={{ duration: 0.3 }}
                         className="mt-4 max-w-2xl text-text-secondary text-base md:text-lg font-body"
                         style={{ lineHeight: '2.2' }}
                     >
@@ -61,9 +61,9 @@ export default function Hero() {
 
                     {/* CTA Buttons */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5, duration: 0.6 }}
+                        transition={{ duration: 0.3 }}
                         className="mt-8 flex flex-wrap gap-4 justify-center"
                     >
                         <motion.a

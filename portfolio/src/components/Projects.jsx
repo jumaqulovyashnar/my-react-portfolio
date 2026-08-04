@@ -4,8 +4,19 @@ import ShinyText from './ui/ShinyText';
 
 const projects = [
     {
+        title: 'Top Donate Bot',
+        descKey: 'projects.topDonateDesc',
+        defaultDesc: 'A Telegram Bot built for fast and secure donations and managing charity contributions.',
+        tags: ['Telegram Bot', 'Bot API', 'JavaScript'],
+        accent: '#0088cc',
+        gradient: 'from-sky-500 to-blue-600',
+        live: 'https://t.me/top_DonateUzbot',
+        github: '#',
+    },
+    {
         title: 'DevPortfolio',
-        description: 'Personal portfolio website with animations and i18n support',
+        descKey: 'projects.devPortfolioDesc',
+        defaultDesc: 'Personal portfolio website with animations and i18n support',
         tags: ['React', 'Tailwind', 'Framer Motion'],
         accent: '#7c3aed',
         gradient: 'from-purple-600 to-violet-500',
@@ -14,7 +25,8 @@ const projects = [
     },
     {
         title: 'TaskFlow App',
-        description: 'A sleek task manager with drag-and-drop and local storage',
+        descKey: 'projects.taskFlowDesc',
+        defaultDesc: 'A sleek task manager with drag-and-drop and local storage',
         tags: ['React', 'JavaScript', 'CSS3'],
         accent: '#3b82f6',
         gradient: 'from-blue-600 to-cyan-500',
@@ -23,7 +35,8 @@ const projects = [
     },
     {
         title: 'Weather Dashboard',
-        description: 'Real-time weather app using OpenWeatherMap API with beautiful charts',
+        descKey: 'projects.weatherDesc',
+        defaultDesc: 'Real-time weather app using OpenWeatherMap API with beautiful charts',
         tags: ['React', 'API', 'Chart.js'],
         accent: '#06b6d4',
         gradient: 'from-cyan-600 to-teal-500',
@@ -77,7 +90,9 @@ export default function Projects() {
                             {/* Card Body */}
                             <div className="p-6">
                                 <h3 className="text-xl font-display font-bold text-text-primary mb-2">{project.title}</h3>
-                                <p className="text-text-secondary text-sm font-body mb-4">{project.description}</p>
+                                <p className="text-text-secondary text-sm font-body mb-4">
+                                    {t(project.descKey, project.defaultDesc)}
+                                </p>
 
                                 {/* Tags */}
                                 <div className="flex flex-wrap gap-2 mb-6">
@@ -95,16 +110,22 @@ export default function Projects() {
                                 <div className="flex gap-3">
                                     <a
                                         href={project.live}
+                                        target={project.live !== '#' ? '_blank' : '_self'}
+                                        rel="noopener noreferrer"
                                         className="flex-1 text-center px-4 py-2 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
                                     >
                                         {t('projects.live')}
                                     </a>
-                                    <a
-                                        href={project.github}
-                                        className="flex-1 text-center px-4 py-2 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
-                                    >
-                                        {t('projects.github')}
-                                    </a>
+                                    {project.github && project.github !== '#' && (
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex-1 text-center px-4 py-2 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
+                                        >
+                                            {t('projects.github')}
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>

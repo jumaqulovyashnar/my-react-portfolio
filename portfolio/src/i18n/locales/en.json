@@ -33,7 +33,11 @@
         "title": "Projects",
         "subtitle": "Things I've built",
         "live": "Live Demo",
-        "github": "GitHub"
+        "github": "GitHub",
+        "topDonateDesc": "A Telegram Bot built for fast and secure donations and managing charity contributions.",
+        "devPortfolioDesc": "Personal portfolio website with animations and i18n support.",
+        "taskFlowDesc": "A sleek task manager with drag-and-drop and local storage.",
+        "weatherDesc": "Real-time weather app using OpenWeatherMap API with beautiful charts."
     },
     "contact": {
         "title": "Contact",

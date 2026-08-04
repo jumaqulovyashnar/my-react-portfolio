@@ -14,6 +14,16 @@ const projects = [
         github: '#',
     },
     {
+        title: 'Shafmet Admin Panel',
+        descKey: 'projects.shafmetDesc',
+        defaultDesc: 'A modern administration dashboard built using React, TypeScript, Tailwind CSS, and TanStack.',
+        tags: ['TypeScript', 'Tailwind CSS', 'TanStack', 'React'],
+        accent: '#0284c7',
+        gradient: 'from-blue-600 to-cyan-500',
+        live: 'https://shafmet-admin-panel.vercel.app',
+        github: 'https://github.com/jumaqulovyashnar/shafmet-admin-panel',
+    },
+    {
         title: 'DevPortfolio',
         descKey: 'projects.devPortfolioDesc',
         defaultDesc: 'Personal portfolio website with animations and i18n support',

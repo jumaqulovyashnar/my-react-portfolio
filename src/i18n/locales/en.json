@@ -35,6 +35,7 @@
         "live": "Live Demo",
         "github": "GitHub",
         "topDonateDesc": "A Telegram Bot built for fast and secure donations and managing charity contributions.",
+        "shafmetDesc": "A modern administration dashboard built using React, TypeScript, Tailwind CSS, and TanStack.",
         "devPortfolioDesc": "Personal portfolio website with animations and i18n support."
     },
     "contact": {

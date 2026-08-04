@@ -63,7 +63,7 @@ export default function Projects() {
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.15, duration: 0.5 }}
                             whileHover={{ y: -8, borderColor: project.accent }}
-                            className="glass-card overflow-hidden group cursor-pointer transition-all duration-300"
+                            className="glass-card overflow-hidden group cursor-pointer transition-all duration-300 flex flex-col h-full"
                             style={{
                                 boxShadow: `0 0 0px transparent`,
                             }}
@@ -78,31 +78,33 @@ export default function Projects() {
                             <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
 
                             {/* Card Body */}
-                            <div className="p-6">
-                                <h3 className="text-xl font-display font-bold text-text-primary mb-2">{project.title}</h3>
-                                <p className="text-text-secondary text-sm font-body mb-4">
-                                    {t(project.descKey, project.defaultDesc)}
-                                </p>
+                            <div className="p-6 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h3 className="text-xl font-display font-bold text-text-primary mb-2">{project.title}</h3>
+                                    <p className="text-text-secondary text-sm font-body mb-4">
+                                        {t(project.descKey, project.defaultDesc)}
+                                    </p>
 
-                                {/* Tags */}
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {project.tags.map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="px-3 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-text-secondary"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
+                                    {/* Tags */}
+                                    <div className="flex flex-wrap gap-2 mb-6">
+                                        {project.tags.map((tag) => (
+                                            <span
+                                                key={tag}
+                                                className="px-3 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-text-secondary"
+                                            >
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
 
-                                {/* Buttons */}
-                                <div className="flex gap-3">
+                                {/* Buttons - Aligned horizontally on X-axis across all cards */}
+                                <div className="flex gap-3 mt-auto pt-2">
                                     <a
                                         href={project.live}
                                         target={project.live !== '#' ? '_blank' : '_self'}
                                         rel="noopener noreferrer"
-                                        className="flex-1 text-center px-4 py-2 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
+                                        className="flex-1 text-center px-4 py-2.5 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
                                     >
                                         {t('projects.live')}
                                     </a>
@@ -111,7 +113,7 @@ export default function Projects() {
                                             href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 text-center px-4 py-2 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
+                                            className="flex-1 text-center px-4 py-2.5 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
                                         >
                                             {t('projects.github')}
                                         </a>

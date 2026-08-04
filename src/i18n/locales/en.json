@@ -31,7 +31,7 @@
     },
     "projects": {
         "title": "Projects",
-        "subtitle": "Things I've built",
+        "subtitle": "Websites and projects I've built",
         "live": "Demo",
         "github": "GitHub",
         "topDonateDesc": "A Telegram Bot built for fast and secure donations and managing charity contributions.",

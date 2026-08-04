@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import ShinyText from './ui/ShinyText';
 
 const projects = [
@@ -104,18 +105,20 @@ export default function Projects() {
                                         href={project.live}
                                         target={project.live !== '#' ? '_blank' : '_self'}
                                         rel="noopener noreferrer"
-                                        className="flex-1 text-center px-4 py-2.5 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
+                                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
                                     >
-                                        {t('projects.live')}
+                                        <FiExternalLink className="text-base text-accent-light" />
+                                        <span>{t('projects.live')}</span>
                                     </a>
                                     {project.github && project.github !== '#' && (
                                         <a
                                             href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 text-center px-4 py-2.5 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
+                                            className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium bg-white/5 border border-white/10 text-text-primary hover:bg-white/10 transition-colors"
                                         >
-                                            {t('projects.github')}
+                                            <FiGithub className="text-base" />
+                                            <span>{t('projects.github')}</span>
                                         </a>
                                     )}
                                 </div>

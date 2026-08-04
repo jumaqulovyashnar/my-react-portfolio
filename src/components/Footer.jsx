@@ -1,41 +1,25 @@
 import { useTranslation } from 'react-i18next';
-import { FiArrowUp } from 'react-icons/fi';
 
 export default function Footer() {
     const { t } = useTranslation();
     const year = new Date().getFullYear();
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
     return (
-        <footer className="border-t border-white/10 pt-12 pb-24 md:pb-12 bg-background/50 text-text-primary">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                {/* 2-Column Main Flex: Brand & Nav Links */}
-                <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-10">
-                    {/* Brand & Role */}
-                    <div>
-                        <a href="#home" className="flex items-center gap-2 font-display font-bold text-2xl mb-2 group">
-                            <span className="text-accent-primary group-hover:scale-110 transition-transform">&lt;/&gt;</span>
-                            <span className="text-white">Jumaqulov Yashnar</span>
-                        </a>
-                        <p className="text-accent-light text-sm font-mono tracking-wide">
-                            Frontend Developer
-                        </p>
-                    </div>
-
-                    {/* Navigation Links List */}
-                    <div className="flex flex-col gap-3 font-body text-sm text-text-secondary">
-                        <a href="#about" className="hover:text-white transition-colors">{t('nav.about')}</a>
-                        <a href="#skills" className="hover:text-white transition-colors">{t('nav.skills')}</a>
-                        <a href="#projects" className="hover:text-white transition-colors">{t('nav.projects')}</a>
-                        <a href="#contact" className="hover:text-white transition-colors">{t('nav.contact')}</a>
-                    </div>
+        <footer className="border-t border-white/10 pt-10 pb-20 md:pb-10 bg-background/50 text-text-primary">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center gap-6">
+                {/* Brand & Role */}
+                <div>
+                    <a href="#home" className="flex items-center justify-center gap-2 font-display font-bold text-2xl mb-1 group">
+                        <span className="text-accent-primary group-hover:scale-110 transition-transform">&lt;/&gt;</span>
+                        <span className="text-white">Jumaqulov Yashnar</span>
+                    </a>
+                    <p className="text-accent-light text-sm font-mono tracking-wide">
+                        Frontend Developer
+                    </p>
                 </div>
 
                 {/* Social Links Row */}
-                <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-white/5 mb-10 text-sm font-mono text-text-secondary">
+                <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-mono text-text-secondary">
                     <a href="https://github.com/jumaqulovyashnar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" /></svg>
                         <span>jumaqulovyashnar</span>
@@ -50,19 +34,10 @@ export default function Footer() {
                     </a>
                 </div>
 
-                {/* Bottom Copyright & Scroll-To-Top Button */}
-                <div className="flex items-center justify-between pt-6 border-t border-white/10 text-xs sm:text-sm text-text-muted">
-                    <p className="font-body">
-                        © {year} Jumaqulov Yashnar. {t('footer.rights')}
-                    </p>
-                    <button
-                        onClick={scrollToTop}
-                        aria-label="Scroll to top"
-                        className="p-2.5 rounded-lg bg-accent-primary/10 border border-accent-primary/30 text-accent-light hover:bg-accent-primary hover:text-white transition-all transform hover:scale-110 cursor-pointer"
-                    >
-                        <FiArrowUp className="w-5 h-5" />
-                    </button>
-                </div>
+                {/* Bottom Copyright */}
+                <p className="text-text-muted text-xs sm:text-sm font-body pt-4 border-t border-white/10 w-full text-center">
+                    © {year} Jumaqulov Yashnar. {t('footer.rights')}
+                </p>
             </div>
         </footer>
     );

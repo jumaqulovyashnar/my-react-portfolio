@@ -10,10 +10,9 @@
         "greeting": "Salom men",
         "name": "Jumaqulov Yashnar",
         "roles": [
-            "Kichik Daraja Frontend Dasturchi",
-            "React Ishqibozi",
-            "UI/UX Sevuvchi",
-            "Ochiq Manba Hissachisi"
+            "React kutubxonasi yordamida veb-saytlar ishlab chiqish bo‘yicha mutaxassis",
+            "Frontend Dasturchi",
+            "Zamonaviy Veb Ilovalar Yaratuvchisi"
         ],
         "description": "Men zamonaviy veb tajribalarini toza kod va ijodiy dizayn bilan yarataman. G'oyalarni piksel mukammal haqiqatga aylantirishni sevaman.",
         "cta_projects": "Loyihalarni Ko'rish",

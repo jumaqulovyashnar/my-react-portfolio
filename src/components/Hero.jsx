@@ -117,7 +117,7 @@ function Typewriter({ roles }) {
     }, [text, isDeleting, roleIndex, roles]);
 
     return (
-        <p className="text-lg md:text-xl text-accent-light font-mono h-8 flex items-center justify-center leading-none">
+        <p className="text-base sm:text-lg md:text-xl text-accent-light font-mono min-h-[32px] md:min-h-[40px] flex items-center justify-center leading-normal text-center max-w-3xl px-2">
             <span>{text}</span>
             <span className="animate-blink text-accent-primary ml-0.5">|</span>
         </p>

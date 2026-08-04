@@ -23,16 +23,6 @@ const projects = [
         live: 'https://shafmet-admin-panel.vercel.app',
         github: 'https://github.com/jumaqulovyashnar/shafmet-admin-panel',
     },
-    {
-        title: 'DevPortfolio',
-        descKey: 'projects.devPortfolioDesc',
-        defaultDesc: 'Personal portfolio website with animations and i18n support',
-        tags: ['React', 'Tailwind', 'Framer Motion'],
-        accent: '#7c3aed',
-        gradient: 'from-purple-600 to-violet-500',
-        live: 'https://github.com/jumaqulovyashnar/my-react-portfolio',
-        github: 'https://github.com/jumaqulovyashnar/my-react-portfolio',
-    },
 ];
 
 export default function Projects() {

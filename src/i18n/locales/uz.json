@@ -23,7 +23,7 @@
         "title": "Men Haqimda",
         "subtitle": "Dasturlash yo'limda kim bo'lganimni va qayerga intilayotganimni bilib oling.",
         "bio": "Men Jumaqulov Yashnar, O'zbekistonda istiqomat qiluvchi kichik frontend dasturchi. Sayohatimni HTML va CSS bilan boshladim, keyin JavaScript o'rgandim. Hozir React bilan ishlayman va har kuni yanada yaxshiroq bo'lmoqdaman. Yaxshi UI faqat ko'rinish emas — foydalanuvchiga qulaylik hisini ham beradi. Kelajakda mening maqsadim Microsoft kompaniyasida ishlash.",
-        "clock_label": "Frontend va dasturlashni o'rganishga sarflanayotgan vaqt"
+        "clock_label": "Frontend va dasturlashni o'rganishga sarflanayotgan vaqt."
     },
     "skills": {
         "title": "Ko'nikmalar",

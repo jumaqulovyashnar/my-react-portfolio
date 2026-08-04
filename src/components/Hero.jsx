@@ -117,9 +117,11 @@ function Typewriter({ roles }) {
     }, [text, isDeleting, roleIndex, roles]);
 
     return (
-        <p className="text-base sm:text-lg md:text-xl text-accent-light font-mono min-h-[32px] md:min-h-[40px] flex items-center justify-center leading-normal text-center max-w-3xl px-2">
-            <span>{text}</span>
-            <span className="animate-blink text-accent-primary ml-0.5">|</span>
-        </p>
+        <div className="min-h-[56px] md:min-h-[64px] flex items-center justify-center text-center max-w-3xl px-2">
+            <p className="text-base sm:text-lg md:text-xl text-accent-light font-mono leading-relaxed text-center">
+                <span>{text}</span>
+                <span className="animate-blink text-accent-primary ml-0.5 inline-block">|</span>
+            </p>
+        </div>
     );
 }

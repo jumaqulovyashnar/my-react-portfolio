@@ -96,7 +96,9 @@ function Typewriter({ roles }) {
     const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
-        const currentRole = roles[roleIndex];
+        if (!roles || !Array.isArray(roles) || roles.length === 0) return;
+
+        const currentRole = roles[roleIndex] || '';
         let timeout;
 
         if (!isDeleting && text === currentRole) {
@@ -115,9 +117,9 @@ function Typewriter({ roles }) {
     }, [text, isDeleting, roleIndex, roles]);
 
     return (
-        <p className="text-lg md:text-xl text-accent-light font-mono h-8">
-            {text}
-            <span className="animate-blink text-accent-primary">|</span>
+        <p className="text-lg md:text-xl text-accent-light font-mono h-8 flex items-center justify-center leading-none">
+            <span>{text}</span>
+            <span className="animate-blink text-accent-primary ml-0.5">|</span>
         </p>
     );
 }

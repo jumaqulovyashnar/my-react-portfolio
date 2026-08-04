@@ -35,7 +35,8 @@
         "live": "Jonli Demo",
         "github": "GitHub",
         "topDonateDesc": "Telegram orqali tez va xavfsiz ehson yuborish hamda xayriyalarni boshqarish uchun mo'ljallangan Telegram Bot.",
-        "shafmetDesc": "TypeScript, Tailwind CSS va TanStack yordamida yaratilgan zamonaviy boshqaruv va admin paneli tizimi."
+        "shafmetDesc": "TypeScript, Tailwind CSS va TanStack yordamida yaratilgan zamonaviy boshqaruv va admin paneli tizimi.",
+        "linguaProDesc": "O'quv markazlari hamda ta'lim muassasalari va o'quvchilarni boshqarish uchun yaratilgan zamonaviy CRM tizimi."
     },
     "contact": {
         "title": "Aloqa",

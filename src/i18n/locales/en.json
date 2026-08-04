@@ -35,7 +35,8 @@
         "live": "Live Demo",
         "github": "GitHub",
         "topDonateDesc": "A Telegram Bot built for fast and secure donations and managing charity contributions.",
-        "shafmetDesc": "A modern administration dashboard built using React, TypeScript, Tailwind CSS, and TanStack."
+        "shafmetDesc": "A modern administration dashboard built using React, TypeScript, Tailwind CSS, and TanStack.",
+        "linguaProDesc": "A modern CRM system designed for managing educational centers, courses, and student activities."
     },
     "contact": {
         "title": "Contact",

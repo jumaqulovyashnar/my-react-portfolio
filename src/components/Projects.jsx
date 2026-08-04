@@ -23,6 +23,16 @@ const projects = [
         live: 'https://shafmet-admin-panel.vercel.app',
         github: 'https://github.com/jumaqulovyashnar/shafmet-admin-panel',
     },
+    {
+        title: 'LinguaPro Edu CRM',
+        descKey: 'projects.linguaProDesc',
+        defaultDesc: 'A modern CRM system designed for managing educational centers, courses, and student activities.',
+        tags: ['React', 'TypeScript', 'Tailwind CSS', 'CRM'],
+        accent: '#e11d48',
+        gradient: 'from-rose-600 to-pink-500',
+        live: 'https://lingua-pro-edu-crm.vercel.app',
+        github: 'https://github.com/jumaqulovyashnar/lingua-pro-edu-crm',
+    },
 ];
 
 export default function Projects() {

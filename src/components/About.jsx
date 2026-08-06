@@ -42,7 +42,7 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="flex items-center md:items-start pt-4 md:pt-8"
           >
-            <p className="text-text-secondary text-base md:text-lg leading-[2.2] md:leading-[2.5] font-body text-justify md:text-left px-2 md:px-0">
+            <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-[2.6] sm:leading-[2.8] md:leading-[3.0] font-body text-justify md:text-left px-2 md:px-0 tracking-wide">
               {t('about.bio')}
             </p>
           </motion.div>

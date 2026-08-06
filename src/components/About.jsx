@@ -51,7 +51,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative flex flex-col items-center justify-center"
+            className="relative flex flex-col items-center justify-center pt-6 md:pt-14"
           >
             <div className="relative z-10">
               <Clock />

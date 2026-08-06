@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import StarBurst from './ui/StarBurst';
 import ShinyText from './ui/ShinyText';
+import DeveloperBackground from './ui/DeveloperBackground';
 
 export default function Hero() {
     const { t } = useTranslation();
@@ -12,6 +13,9 @@ export default function Hero() {
         <section id="home" className="relative min-h-[auto] md:min-h-screen flex items-start md:items-center justify-center overflow-hidden pt-[120px] md:pt-0">
             {/* Star Burst Background */}
             <StarBurst />
+
+            {/* Developer Code Background */}
+            <DeveloperBackground />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 md:py-20 w-full">
                 <div className="flex flex-col items-center text-center">

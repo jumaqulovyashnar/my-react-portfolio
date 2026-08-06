@@ -33,16 +33,16 @@ export default function About() {
           <p className="mt-5 text-text-primary font-body text-base md:text-lg leading-relaxed px-2 md:px-0">{t('about.subtitle')}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center md:items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Bio Text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="flex items-center md:items-start pt-4 md:pt-8"
+            className="flex items-center"
           >
-            <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-[2.8] sm:leading-[3.0] md:leading-[3.2] font-body text-justify md:text-left px-2 md:px-0 tracking-wide">
+            <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-[2.6] sm:leading-[2.8] md:leading-[3.0] font-body text-justify md:text-left px-2 md:px-0 tracking-wide">
               {t('about.bio')}
             </p>
           </motion.div>
@@ -51,12 +51,12 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative flex flex-col items-center justify-center pt-6 md:pt-14"
+            className="relative flex flex-col items-center justify-center"
           >
             <div className="relative z-10">
               <Clock />
             </div>
-            <p className="mt-6 md:mt-[45px] text-text-muted text-base md:text-lg font-body text-center">{t('about.clock_label')}</p>
+            <p className="mt-6 md:mt-8 text-text-muted text-base md:text-lg font-body text-center">{t('about.clock_label')}</p>
           </motion.div>
         </div>
       </div>
